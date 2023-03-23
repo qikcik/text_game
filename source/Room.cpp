@@ -9,7 +9,7 @@
     os<<"'"<<r.description<<"'"<<std::endl;
 
     os<<"> ";
-    for( const std::string &d : r.exits)
+    for( const CommandName &d : r.exits)
     {
         os<<d<<" ";
     }

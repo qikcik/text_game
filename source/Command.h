@@ -8,6 +8,7 @@
 #include "Room.h"
 #include "Cords.h"
 
+using CommandName = std::string;
 
 
 struct World
@@ -26,7 +27,7 @@ bool W(World &);
 bool EQ(World &);
 
 bool SHOP(World &);
-const std::unordered_map<std::string, bool (*)(World &)> cmd
+const std::unordered_map<CommandName, bool (*)(World &)> cmd
 {
 {"N",N},
 {"E",E},
