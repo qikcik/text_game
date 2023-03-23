@@ -1,11 +1,10 @@
 #include <iostream>
 #include <unordered_map>
 
-
 #include "Room.h"
 #include "Player.h"
 #include "Command.h"
-
+#include "Cords.h"
 
 
 
@@ -13,7 +12,7 @@ int main() {
 
     Player player{{0, 0}};
 
-    std::unordered_map<std::array<int,2>, Room, ArrayHasher> map
+    std::unordered_map<Cords, Room, CordsHasher> map
     {
         {{0,0},{"City", "small town", {"N","E","S","W"},{"SHOP"}}},
         {{0,1},{"Forest", "lot of trees", {"S"}}},
@@ -29,42 +28,8 @@ int main() {
     const Room * room = &map.at(player.getPos());
     std::string input;
 
-  /*  while (true) {
-        room->printRoom();
+    World world{player, map, &map.at(player.getPos())};
 
-        std::cout << "<Player> ";
-        std::cin >> input;
-
-        std::transform(input.begin(), input.end(), input.begin(), ::toupper);
-        while(room->getExits().find(input) == std::string::npos)
-        {
-            std::cout << "Wrong input!"<<std::endl;
-            std::cout << "<Player> ";
-            std::cin >> input;
-        }
-        switch (input[0]) {
-            case 'N':
-                player.move(0,1);
-            break;
-
-            case 'E':
-                player.move(1, 0);
-            break;
-
-            case 'S':
-                player.move(0,-1);
-            break;
-
-            case 'W':
-                player.move(-1, 0);
-            break;
-        }
-        room = &map.at(player.getPos());
-    }
-*/
-
-
-  World world{player, map, &map.at(player.getPos())};
 
     while (true) {
         std::cout<<*room;
@@ -75,11 +40,11 @@ int main() {
         std::transform(input.begin(), input.end(), input.begin(), ::toupper);
 
         while
-        (std::find(room->getExits().begin(), room->getExits().end(),input) == room->getExits().end()
+        (std::find(room->getExits().begin(), room->getExits().end(),input) == room->getExits().end()        // chceck if Room exits contain input
         &&
-        std::find(player.getCmds().begin(), player.getCmds().end(),input) == player.getCmds().end()
+        std::find(player.getCmds().begin(), player.getCmds().end(),input) == player.getCmds().end()         // chceck if Room commands contain input
         &&
-        std::find(room->getCmds().begin(), room->getCmds().end(),input) == room->getCmds().end()
+        std::find(room->getCmds().begin(), room->getCmds().end(),input) == room->getCmds().end()            // chceck if Player commands contain input
         )
         {
             std::cout << "Wrong input!"<<std::endl;

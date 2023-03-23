@@ -1,18 +1,18 @@
 #pragma once
 
-#include <array>
 #include <vector>
 #include <string>
 
+#include "Cords.h"
 
 class Player {
 private:
-     std::array<int,2> position;                                    // room coordinates
+    Cords position;                                                  // current room coordinates
     //int hp;
     std::vector<std::string> commands{"EQ"};                              // Player commands showeq, showskills etc.
 public:
-    Player(const std::array<int,2> & pos): position(pos){}
-    std::array<int,2> getPos()const { return position; }            // get position
+    Player(const Cords & pos): position(pos){}
+    Cords getPos()const { return position; }            // get position
     const std::vector<std::string> & getCmds()const { return commands; }
     void move(const int & x, const int & y)                         // move player
     {

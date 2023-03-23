@@ -3,14 +3,17 @@
 #include <string>
 #include <iostream>
 #include <unordered_map>
+
 #include "Player.h"
 #include "Room.h"
+#include "Cords.h"
+
 
 
 struct World
 {
     Player & player;
-    std::unordered_map<std::array<int,2>, Room, ArrayHasher> & map;
+    std::unordered_map<Cords, Room, CordsHasher> & map;
     Room * room = nullptr;
 };
 

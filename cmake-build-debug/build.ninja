@@ -61,6 +61,12 @@ build CMakeFiles/text_game.dir/source/Content.cpp.obj: CXX_COMPILER__text_game_D
   OBJECT_DIR = CMakeFiles\text_game.dir
   OBJECT_FILE_DIR = CMakeFiles\text_game.dir\source
 
+build CMakeFiles/text_game.dir/source/Cords.cpp.obj: CXX_COMPILER__text_game_Debug C$:/Users/Pawel/Desktop/clion_projects/text_game/source/Cords.cpp || cmake_object_order_depends_target_text_game
+  DEP_FILE = CMakeFiles\text_game.dir\source\Cords.cpp.obj.d
+  FLAGS = -Wall -Wextra -pedantic -static-libstdc++ -static-libgcc -g -fdiagnostics-color=always -std=gnu++20
+  OBJECT_DIR = CMakeFiles\text_game.dir
+  OBJECT_FILE_DIR = CMakeFiles\text_game.dir\source
+
 build CMakeFiles/text_game.dir/source/Player.cpp.obj: CXX_COMPILER__text_game_Debug C$:/Users/Pawel/Desktop/clion_projects/text_game/source/Player.cpp || cmake_object_order_depends_target_text_game
   DEP_FILE = CMakeFiles\text_game.dir\source\Player.cpp.obj.d
   FLAGS = -Wall -Wextra -pedantic -static-libstdc++ -static-libgcc -g -fdiagnostics-color=always -std=gnu++20
@@ -87,7 +93,7 @@ build CMakeFiles/text_game.dir/source/main.cpp.obj: CXX_COMPILER__text_game_Debu
 #############################################
 # Link the executable C:\Users\Pawel\Desktop\clion_projects\text_game\bin\text_game.exe
 
-build C$:/Users/Pawel/Desktop/clion_projects/text_game/bin/text_game.exe: CXX_EXECUTABLE_LINKER__text_game_Debug CMakeFiles/text_game.dir/source/Command.cpp.obj CMakeFiles/text_game.dir/source/Content.cpp.obj CMakeFiles/text_game.dir/source/Player.cpp.obj CMakeFiles/text_game.dir/source/Room.cpp.obj CMakeFiles/text_game.dir/source/main.cpp.obj
+build C$:/Users/Pawel/Desktop/clion_projects/text_game/bin/text_game.exe: CXX_EXECUTABLE_LINKER__text_game_Debug CMakeFiles/text_game.dir/source/Command.cpp.obj CMakeFiles/text_game.dir/source/Content.cpp.obj CMakeFiles/text_game.dir/source/Cords.cpp.obj CMakeFiles/text_game.dir/source/Player.cpp.obj CMakeFiles/text_game.dir/source/Room.cpp.obj CMakeFiles/text_game.dir/source/main.cpp.obj
   FLAGS = -Wall -Wextra -pedantic -static-libstdc++ -static-libgcc -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\text_game.dir
