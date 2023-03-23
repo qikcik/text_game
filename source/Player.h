@@ -1,9 +1,4 @@
-//
-// Created by Pawel on 28.02.2023.
-//
-
-#ifndef TEXT_GAME_PLAYER_H
-#define TEXT_GAME_PLAYER_H
+#pragma once
 
 #include <array>
 #include <vector>
@@ -29,4 +24,4 @@ public:
 };
 
 
-#endif //TEXT_GAME_PLAYER_H
+

@@ -1,9 +1,4 @@
-//
-// Created by Pawel on 19.03.2023.
-//
-
-#ifndef TEXT_GAME_CONTENT_H
-#define TEXT_GAME_CONTENT_H
+#pragma once
 
 #include <string>
 
@@ -18,4 +13,3 @@ public:
 };
 
 
-#endif //TEXT_GAME_CONTENT_H

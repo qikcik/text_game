@@ -1,9 +1,4 @@
-//
-// Created by Pawel on 19.03.2023.
-//
-
-#ifndef TEXT_GAME_COMMAND_H
-#define TEXT_GAME_COMMAND_H
+#pragma once
 
 #include <string>
 #include <iostream>
@@ -39,4 +34,4 @@ const std::unordered_map<std::string, bool (*)(World &)> cmd
 };
 
 
-#endif //TEXT_GAME_COMMAND_H
+

@@ -1,9 +1,4 @@
-//
-// Created by Pawel on 28.02.2023.
-//
-
-#ifndef TEXT_GAME_ROOM_H
-#define TEXT_GAME_ROOM_H
+#pragma once
 
 #include <string>
 #include <array>
@@ -45,4 +40,3 @@ public:
 };
 
 
-#endif //TEXT_GAME_ROOM_H
