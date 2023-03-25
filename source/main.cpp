@@ -6,7 +6,10 @@
 #include "Command.h"
 #include "Cords.h"
 
-
+bool checkIfRoomExitsContainInput(const Room room,const std::string& input)
+{
+    return std::find(room->getExits().begin(), room->getExits().end(),input) == room->getExits().end();
+}
 
 int main() {
 
@@ -40,7 +43,7 @@ int main() {
         std::transform(input.begin(), input.end(), input.begin(), ::toupper);
 
         while
-        (std::find(room->getExits().begin(), room->getExits().end(),input) == room->getExits().end()        // chceck if Room exits contain input
+        (checkIfRoomExitsContainInput(&room,input)        // now comment are uneccesery
         &&
         std::find(player.getCmds().begin(), player.getCmds().end(),input) == player.getCmds().end()         // chceck if Room commands contain input
         &&
